@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
-<title>Mxxx Txxxxxxx-Pxxxx's Resume</title>
+<title>Mavi Toktamis-Paker's Resume</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
@@ -68,12 +68,8 @@ h1 span.surname {
   font-weight: 700;
 }
 
-.entry-header span:first-child {
-  color: #b45f06; /* Updated to color titles */
-}
-
-.entry-header span:first-child span {
-  color: inherit; /* Ensure firms retain default color */
+.entry-title {
+  color: #b45f06; /* Orange color for the first part */
 }
 
 .entry-subheader {
@@ -100,8 +96,9 @@ li {
   list-style-type: disc;
 }
 
-.projects li strong {
-  color: #b45f06;
+.project-title {
+  color: #b45f06; /* Orange color for project titles */
+  font-weight: bold;
 }
 
 @media print {
@@ -116,12 +113,11 @@ li {
 <main itemscope="" itemtype="https://schema.org/Person">
 
 <header>
-  <h1 itemprop="name">Mxxx <span class="surname">Txxxxxxx-Pxxxx</span></h1>
+  <h1 itemprop="name">Mavi <span class="surname">Toktamis-Paker</span></h1>
   <div class="contact">
     <span itemprop="address">Brooklyn, NY</span>•
-    <span itemprop="telephone">333-666-9999</span>•
-    <a href="mailto:mxxxtxxxxxxxpxxxx@gmail.com" itemprop="email">mxxxtxxxxxxxpxxxx@gmail.com</a>•
-    <a href="https://linkedin.com/in/mxxx-txxxxxxx-pxxxx" itemprop="sameAs">linkedin.com/in/mxxx-txxxxxxx-pxxxx</a>
+    <a href="https://linkedin.com/in/mavi-toktamis-paker" itemprop="sameAs">linkedin.com/in/mavi-toktamis-paker</a>•
+    <span>Email & phone available on request</span>
   </div>
 </header>
 
@@ -139,7 +135,7 @@ li {
 
   <article class="entry" itemprop="hasOccupation" itemscope="" itemtype="https://schema.org/Occupation">
     <div class="entry-header">
-      <span>Software Engineer I &amp; II • <span itemprop="occupationLocation" itemscope="" itemtype="https://schema.org/Organization"><span itemprop="name">VMware / Broadcom</span></span></span>
+      <span><span class="entry-title">Software Engineer I &amp; II</span> • <span itemprop="occupationLocation" itemscope="" itemtype="https://schema.org/Organization"><span itemprop="name">VMware / Broadcom</span></span></span>
       <span>Jul 2021 – Aug 2024</span>
     </div>
     <ul>
@@ -159,7 +155,7 @@ grain.</li>
 
   <article class="entry">
     <div class="entry-header">
-      <span>Web Developer • Freelance</span>
+      <span><span class="entry-title">Web Developer</span> • Freelance</span>
       <span>Jun 2020 – Apr 2021</span>
     </div>
     <ul>
@@ -169,7 +165,7 @@ grain.</li>
 
   <article class="entry">
     <div class="entry-header">
-      <span>Academic Tutor &amp; Translator • Freelance</span>
+      <span><span class="entry-title">Academic Tutor &amp; Translator</span> • Freelance</span>
       <span>Sept 2016 – Dec 2019</span>
     </div>
     <ul>
@@ -180,7 +176,7 @@ grain.</li>
 
   <article class="entry">
     <div class="entry-header">
-      <span>Site Coordinator • Fig Tree LLC</span>
+      <span><span class="entry-title">Site Coordinator</span> • Fig Tree LLC</span>
       <span>Aug 2018 – Aug 2019</span>
     </div>
     <ul>
@@ -190,7 +186,7 @@ grain.</li>
 
   <article class="entry">
     <div class="entry-header">
-      <span>Lead Instructor • Brooklyn Game Lab</span>
+      <span><span class="entry-title">Lead Instructor</span> • Brooklyn Game Lab</span>
       <span>Jan 2014 – Oct 2016</span>
     </div>
     <ul>
@@ -204,7 +200,7 @@ grain.</li>
 
   <article class="entry">
     <div class="entry-header">
-      <span>Instructor • Code2College</span>
+      <span><span class="entry-title">Instructor</span> • Code2College</span>
       <span>Nov 2022 – Aug 2023</span>
     </div>
     <ul>
@@ -215,7 +211,7 @@ grain.</li>
 
   <article class="entry">
     <div class="entry-header">
-      <span>Web Developer • colonist.io</span>
+      <span><span class="entry-title">Web Developer</span> • colonist.io</span>
       <span>Jan 2021</span>
     </div>
     <ul>
@@ -227,8 +223,17 @@ grain.</li>
 <section class="section projects">
   <div class="section-title">PROJECTS</div>
   <ul>
-    <li><strong>Sandbox Chess</strong> — Multiplayer real-time chess app</li>
-    <li><strong>The Graveyard Shift</strong> — Browser game with a custom animation engine</li>
+    <li><span class="project-title">Sandbox Chess</span> <strong>|</strong> Multiplayer real-time chess app</li>
+    (
+      <a href="https://github.com/mav-code/chess-backend" aria-label="Sandbox Chess backend repository">Backend</a> |
+      <a href="https://github.com/mav-code/chess-frontend" aria-label="Sandbox Chess frontend repository">Frontend</a> |
+      <a href="https://youtu.be/vm_jHLxfdcI" aria-label="Sandbox Chess demo video">Demo</a>
+    )
+    <li><span class="project-title">The Graveyard Shift</span> <strong>|</strong> Browser game with a custom animation engine</li>
+    (
+      <a href="https://github.com/Tororoi/graveyard-js-app" aria-label="The Graveyard Shift GitHub repository">GitHub</a> |
+      <a href="https://youtu.be/tF-EOX1lfjw" aria-label="The Graveyard Shift demo video">Demo</a>
+    )
   </ul>
 </section>
 
@@ -237,7 +242,7 @@ grain.</li>
 
   <article class="entry">
     <div class="entry-header">
-      <span>VMware Ascent Apprentice</span>
+      <span class="entry-title">VMware Ascent Apprentice</span>
       <span>Apr 2021 – Jul 2021</span>
     </div>
     <div class="entry-subheader">Software engineering apprenticeship using Java, GitLab CI/CD, and internal tooling</div>
@@ -245,7 +250,7 @@ grain.</li>
 
   <article class="entry">
     <div class="entry-header">
-      <span>Flatiron School</span>
+      <span class="entry-title">Flatiron School</span>
       <span>Jan 2020 – May 2020</span>
     </div>
     <div class="entry-subheader">Full Stack Web Development (Ruby on Rails, JavaScript, React)</div>
@@ -253,7 +258,7 @@ grain.</li>
 
   <article class="entry">
     <div class="entry-header">
-      <span>Eugene Lang College, The New School</span>
+      <span class="entry-title">Eugene Lang College, The New School</span>
       <span>Aug 2012 – May 2017</span>
     </div>
     <div class="entry-subheader">History, minor in Psychology</div>
