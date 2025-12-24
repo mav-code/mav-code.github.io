@@ -1,0 +1,103 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  margin: 5% auto;
+  line-height: 1.4;
+  text-shadow: 0 1px 0 #ffffff;
+  max-width: 73%;
+}
+
+a {
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  margin-bottom: 22px;
+}
+
+h1 {
+  font-size: 26px;
+  margin: 0 0 4px 0;
+  font-weight: 700;
+}
+
+h1 span.surname {
+  color: #b45f06;
+}
+
+.contact {
+  font-size: 13.5px;
+}
+
+.contact span,
+.contact a {
+  margin-right: 6px;
+}
+
+.section {
+  margin-top: 22px;
+}
+
+.section-title {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid #999;
+  padding-bottom: 2px;
+  margin-bottom: 6px;
+}
+
+.entry {
+  margin-top: 10px;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.entry-title {
+  color: #b45f06; /* Orange color for the first part */
+}
+
+.entry-subheader {
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+ul {
+  margin: 4px 0 0 16px;
+  padding: 0;
+  font-size: 13px
+}
+
+li {
+  font-size: 13.5px;
+  margin-bottom: 3px;
+}
+
+.skills-line {
+  font-size: 13.5px;
+}
+
+.projects li {
+  list-style-type: disc;
+}
+
+.project-title {
+  color: #b45f06; /* Orange color for project titles */
+  font-weight: bold;
+}
+
+@media print {
+  body {
+    margin: 28px 32px;
+  }
+}
