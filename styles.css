@@ -1,16 +1,6 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #000;
-  margin: 5% auto;
-  line-height: 1.4;
-  text-shadow: 0 1px 0 #ffffff;
-  max-width: 73%;
-}
-
-/* Base font size for rem calculations (browser default 16px) */
-html {
-  font-size: 16px;
-}
+/* Clean, variable-driven stylesheet */
+/* Base size */
+html { font-size: 16px; }
 
 :root {
   --font-family: Arial, Helvetica, sans-serif;
@@ -39,7 +29,7 @@ html {
   --print-horz: 2rem; /* 32px */
 }
 
-a {
+body {
   font-family: var(--font-family);
   color: var(--color-text);
   margin: 5% auto;
@@ -48,45 +38,29 @@ a {
   max-width: var(--max-width);
 }
 
-header {
-  color: var(--color-link);
-}
+a { color: var(--color-link); text-decoration: none; }
+a:hover { text-decoration: underline; }
 
-h1 {
-  font-size: 1.625rem; /* 26px */
-  margin: 0 0 0.25rem 0; /* 4px */
-  font-weight: 700;
-}
+header { margin-bottom: var(--space-lg); }
 
-  font-size: var(--fs-h1);
-  margin: 0 0 var(--space-sm) 0; /* 4px */
-  font-weight: 700;
-  color: #b45f06;
-}
+h1 { font-size: var(--fs-h1); margin: 0 0 var(--space-sm) 0; font-weight: 700; }
 
-/* Shared 13.5px size used in several places */
+h1 span.surname,
+.entry-title,
+.project-title { color: var(--color-accent); font-weight: 700; }
+
 .contact,
-  color: var(--color-accent);
+.entry-header,
 .skills-line,
 li,
-.project-info {
-  font-size: 0.844rem; /* 13.5px */
-}
+.project-info { font-size: var(--fs-md); }
 
 .contact span,
-  font-size: var(--fs-md);
-  margin-right: 0.375rem; /* 6px */
-}
+.contact a { margin-right: var(--space-md); }
 
-.section {
-  margin-right: var(--space-md);
-}
+.section { margin-top: var(--space-lg); }
 
 .section-title {
-  margin-top: var(--space-lg);
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  border-bottom: 1px solid #999;
   font-size: var(--fs-section-title);
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -95,60 +69,33 @@ li,
   margin-bottom: var(--space-md);
 }
 
+.entry { margin-top: var(--space-sm); }
+
 .entry-header {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  gap: var(--space-1);
   align-items: flex-start;
   font-weight: 700;
 }
 
-/* Make the left column flexible and allow the date column to stay right-aligned.
-   On very narrow viewports the date moves below the title for clarity. */
-.entry-header > span:first-child {
-  min-width: 0;
-  flex: 1 1 auto;
-}
-.entry-header > span:last-child {
-  flex: 0 0 auto;
-  text-align: right;
-  min-width: 8ch; /* keeps the date block from collapsing too small */
-}
+.entry-left { min-width: 0; flex: 1 1 auto; }
+.entry-dates { flex: 0 0 auto; text-align: right; min-width: 8ch; }
 
 @media (max-width: 480px) {
-  .entry-header {
-    flex-direction: column;
-    gap: 0.25rem;
-    flex-direction: column;
-    gap: var(--space-xxs);
-    text-align: left;
-  }
+  .entry-header { flex-direction: column; gap: var(--space-xxs); }
+  .entry-dates { text-align: left; }
 }
 
 .entry-subheader,
-ul {
-  font-size: 0.813rem; /* 13px */
-}
-  font-size: var(--fs-sm);
-.entry-subheader {
-  margin-bottom: 0.125rem; /* 2px */
-}
-  margin-bottom: var(--space-xxs);
-ul {
-  margin: 0.25rem 0 0 1rem; /* 4px 0 0 16px */
-  padding: 0;
-  margin: var(--space-sm) 0 0 var(--space-1); /* 4px 0 0 16px */
-  padding: 0;
-li {
-  margin-bottom: 0.188rem; /* 3px */
-}
-  margin-bottom: var(--space-xs);
-.project-title {
-  font-weight: bold;
-}
+ul { font-size: var(--fs-sm); }
 
-@media print {
-  body {
-    margin: 1.75rem 2rem; /* 28px 32px */
-  }
-    margin: var(--print-vert) var(--print-horz);
+.entry-subheader { margin-bottom: var(--space-xxs); }
+
+ul { margin: var(--space-sm) 0 0 var(--space-1); padding: 0; }
+
+li { margin-bottom: var(--space-xs); }
+
+.project-title { /* kept for semantic clarity; weight set above */ }
+
+@media print { body { margin: var(--print-vert) var(--print-horz); } }
