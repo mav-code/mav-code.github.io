@@ -39,6 +39,21 @@
    Base Styles
    ========================================================================== */
 
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-link);
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 body {
   font-family: var(--font-family);
   color: var(--color-text);
@@ -55,6 +70,12 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-link);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 /* ==========================================================================
