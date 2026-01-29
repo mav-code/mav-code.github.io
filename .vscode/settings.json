@@ -1,0 +1,6 @@
+{
+    "workbench.editor.autoLockGroups": {
+        "workbench.editor.browserEditor": true
+    },
+    "claudeCode.hideOnboarding": true
+}
