@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  :root {
+    --color-text: #000;
+    --color-link: #1a0dab;
+    --color-accent: #b45f06;
+    --font-family: Arial, Helvetica, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body { width: 1200px; height: 630px; }
+
+  body {
+    font-family: var(--font-family);
+    color: var(--color-text);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 96px;
+  }
+
+  /* The monogram now lives in two SVGs rather than in CSS: stamp.svg is the
+     inked, ruled version, favicon.svg the clean block reused on the url line.
+     Both carry the same letter geometry. */
+  .stamp {
+    display: block;
+    width: 180px;
+    height: 180px;
+    margin-bottom: 38px;
+  }
+
+  h1 {
+    font-size: 88px;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    line-height: 1.05;
+  }
+
+  h1 .surname { color: var(--color-accent); }
+
+  .role {
+    font-size: 34px;
+    line-height: 1.35;
+    margin-top: 10px;
+  }
+
+  .url {
+    font-size: 30px;
+    color: var(--color-link);
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .url .ico {
+    width: 38px;
+    height: 38px;
+    margin-right: 14px;
+  }
+</style>
+</head>
+<body>
+  <img class="stamp" src="stamp.svg" alt="">
+  <h1>mavi <span class="surname">toktamis-paker</span></h1>
+  <div class="role">software engineer, data engineer, etc.</div>
+  <div class="url"><img class="ico" src="favicon.svg" alt="">mavi.party</div>
+</body>
+</html>
