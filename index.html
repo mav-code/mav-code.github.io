@@ -36,7 +36,7 @@
   <div class="section-title">SKILLS</div>
   <div class="skills-line">
     <strong>Languages:</strong> <span itemprop="knowsAbout">Bash</span>, <span itemprop="knowsAbout">HTML/CSS</span>, <span itemprop="knowsAbout">Java</span>, <span itemprop="knowsAbout">JavaScript</span>, <span itemprop="knowsAbout">Python</span>, <span itemprop="knowsAbout">Ruby</span>, <span itemprop="knowsAbout">SQL</span>, <span itemprop="knowsAbout">TypeScript</span>;
-    <strong>Frameworks:</strong> <span itemprop="knowsAbout">Dagster</span>, <span itemprop="knowsAbout">Rails</span>, <span itemprop="knowsAbout">React</span>;
+    <strong>Frameworks:</strong> <span itemprop="knowsAbout">Dagster</span>, <span itemprop="knowsAbout">FastAPI</span>, <span itemprop="knowsAbout">Rails</span>, <span itemprop="knowsAbout">React</span>;
     <strong>Tools:</strong> <span itemprop="knowsAbout">Anthropic API</span>, <span itemprop="knowsAbout">Claude Code</span>, <span itemprop="knowsAbout">Concourse</span>, <span itemprop="knowsAbout">Docker</span>, <span itemprop="knowsAbout">Git</span>, <span itemprop="knowsAbout">Impala</span>, <span itemprop="knowsAbout">Kubernetes</span>, <span itemprop="knowsAbout">Mode</span>, <span itemprop="knowsAbout">PostgreSQL</span>, <span itemprop="knowsAbout">Tableau</span>
   </div>
 </section>
@@ -52,13 +52,13 @@
       <div class="entry-dates">Jul 2021 – Aug 2024</div>
     </div>
     <ul>
-      <li>Designed and built a first-class data mart correlating product entitlements, usage, telemetry, and cross-product analysis across ten products at a daily grain.</li>
-      <li>Drove 11× YoY usage growth by integrating dozens of disparate sources into reliable pipelines, delivering insights to 200+ enterprise customers and stakeholders.</li>
-      <li>Established the mart as the single source of truth for entitlement and usage data, earning the authority to define data-shape and reliability rules across teams.</li>
-      <li>Led DevOps (CI/CD pipelines and Kubernetes infrastructure) and authored architectural decision records to keep governance consistent across engineering teams.</li>
-      <li>Produced actionable reports connecting internal data sources and teams that had never interacted (often siloed by past mergers) and interfaced directly with enterprise customers and stakeholders to meet their needs.</li>
-      <li>Built full-coverage unit, integration, end-to-end, and data-validation tests (freshness, conformity) with KPI and uptime reporting, setting and meeting high standards for coverage and uptime.</li>
-      <li>Spearheaded an internal MySQL patch for broader interoperability with Apache Impala.</li>
+      <li>Designed and built a star-schema data mart correlating product entitlements, usage, and telemetry across ten products at a daily grain; adopted as the company's single source of truth for that data.</li>
+      <li>Integrated dozens of disparate sources into reliable pipelines, delivering insights to internal stakeholders and 200+ enterprise customers; drove 11x usage growth of said pipelines YoY.</li>
+      <li>Built internal tools and reports for teams that had never shared data (siloed by past mergers); ran comprehensive &amp; sustained user interviews to work out real requirements.</li>
+      <li>Led DevOps (Dagster orchestration, CI/CD pipelines, Kubernetes infrastructure) and authored architectural decision records that set the data-shape and reliability rules which other engineering teams built against.</li>
+      <li>Built full-coverage unit, integration, end-to-end, and data-validation tests (freshness, conformity) with KPI and uptime reporting.</li>
+      <li>Designed loads to be idempotent and re-runnable, with incremental processing and backfills.</li>
+      <li>Tuned partitioning and clustering, cutting scan volume and compute cost.</li>
     </ul>
   </article>
 
@@ -82,19 +82,7 @@
       <div class="entry-dates">Sept 2016 – Dec 2019</div>
     </div>
     <ul>
-      <li>Coached high school students to high SAT scores and IB grades; translated postgraduate academic papers for publication in English-language journals.</li>
-    </ul>
-  </article>
-
-  <article class="entry" itemprop="hasOccupation" itemscope itemtype="https://schema.org/Role">
-    <meta itemprop="startDate" content="2018-08">
-    <meta itemprop="endDate" content="2019-08">
-    <div class="entry-header">
-      <div class="entry-left"><span class="entry-title" itemprop="hasOccupation" itemscope itemtype="https://schema.org/Occupation"><span itemprop="name">Site Coordinator</span></span> • <span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Fig Tree LLC</span></span></div>
-      <div class="entry-dates">Aug 2018 – Aug 2019</div>
-    </div>
-    <ul>
-      <li>Coordinated the logistical needs of an afterschool program across four locations.</li>
+      <li>Coached high schoolers to high SAT and IB scores; translated postgraduate papers for English-language journals.</li>
     </ul>
   </article>
 
@@ -112,6 +100,22 @@
 </section>
 
 <section class="section">
+  <div class="section-title">ADDITIONAL EXPERIENCE</div>
+
+  <article class="entry" itemprop="hasOccupation" itemscope itemtype="https://schema.org/Role">
+    <meta itemprop="startDate" content="2026-06">
+    <div class="entry-header">
+      <div class="entry-left"><span class="entry-title" itemprop="hasOccupation" itemscope itemtype="https://schema.org/Occupation"><span itemprop="name">AI Model Annotator</span></span> • <span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">DataAnnotation.tech</span></span> (Freelance)</div>
+      <div class="entry-dates">Jun 2026 – Present</div>
+    </div>
+    <ul>
+      <li>Build testing harnesses for AI models and hand-evaluate model outputs against project rubrics.</li>
+      <li>Review and rewrite LLM-written code reviews of open-source pull requests.</li>
+    </ul>
+  </article>
+</section>
+
+<section class="section">
   <div class="section-title">VOLUNTEER EXPERIENCE</div>
 
   <article class="entry">
@@ -123,12 +127,22 @@
       <li>Taught a biweekly game-development course (pygame) to high schoolers over Zoom; authored, administered, and graded competitive algorithm problems on HackerRank.</li>
     </ul>
   </article>
+
+  <article class="entry">
+    <div class="entry-header">
+      <div class="entry-left"><span class="entry-title">Web Developer</span> • colonist.io</div>
+      <div class="entry-dates">Jan 2021</div>
+    </div>
+    <ul>
+      <li>Designed and programmed maps and UI features in TypeScript for a live multiplayer game.</li>
+    </ul>
+  </article>
 </section>
 
 <section class="section projects">
   <div class="section-title">PROJECTS</div>
   <article class="entry" itemscope itemtype="https://schema.org/SoftwareApplication">
-    <div class="project-info"><span class="project-title" itemprop="name">Sandbox Chess</span> <strong>|</strong> <span itemprop="description">multiplayer real-time chess app</span>
+    <div class="project-info"><span class="project-title" itemprop="name">Sandbox Chess</span> <strong>|</strong> <span itemprop="description">multiplayer real-time chess app; Rails + React with webhooks</span>
       <div class="entry-subheader">
       (
         <a href="https://github.com/mav-code/chess-backend" aria-label="Sandbox Chess backend repository" rel="noopener noreferrer">Backend</a> |
@@ -139,11 +153,10 @@
     </div>
   </article>
   <article class="entry" itemscope itemtype="https://schema.org/SoftwareApplication">
-    <div class="project-info"><span class="project-title" itemprop="name">The Graveyard Shift</span> <strong>|</strong> <span itemprop="description">browser game with a custom animation engine</span>
+    <div class="project-info"><span class="project-title" itemprop="name">The Analyst</span> <strong>|</strong> <span itemprop="description">satirical LLM therapist; FastAPI + Anthropic API with a custom RAG</span>
       <div class="entry-subheader">
       (
-        <a href="https://github.com/Tororoi/graveyard-js-app" aria-label="The Graveyard Shift GitHub repository" rel="noopener noreferrer">GitHub</a> |
-        <a href="https://youtu.be/tF-EOX1lfjw" aria-label="The Graveyard Shift demo video" rel="noopener noreferrer">Demo</a>
+        <a href="https://coach.mavi.party" itemprop="url" aria-label="The Analyst live site" rel="noopener noreferrer">coach.mavi.party</a>
       )
       </div>
     </div>
