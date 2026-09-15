@@ -30,6 +30,8 @@
   /* Layout */
   --max-width: 73%;
   --max-width-px: 56.25rem; /* 900px */
+  --gutter: 1.25rem; /* 20px — edge breathing room once the page goes full-width */
+  --narrow: 600px; /* below this, 73% wastes too much of the screen */
 
   /* Print */
   --print-vert: 1.75rem; /* 28px */
@@ -199,6 +201,16 @@ li {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+
+/* A percentage width suits a desktop but strands a quarter of a phone screen
+   in margin (73% of 390px leaves ~105px empty). Below --narrow, take the full
+   width and keep only a gutter. */
+@media (max-width: 600px) {
+  body {
+    max-width: none;
+    padding-inline: var(--gutter);
+  }
+}
 
 @media (max-width: 480px) {
   .entry-header {
