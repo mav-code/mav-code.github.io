@@ -27,11 +27,12 @@
   --space-lg: 1.375rem; /* 22px */
   --space-1: 1rem; /* 16px */
 
-  /* Layout */
-  --max-width: 73%;
+  /* Layout. The page is fluid up to a comfortable measure — no breakpoints:
+     it fills the viewport minus a gutter until it hits --max-width-px. */
   --max-width-px: 56.25rem; /* 900px */
-  --gutter: 1.25rem; /* 20px — edge breathing room once the page goes full-width */
-  --narrow: 600px; /* below this, 73% wastes too much of the screen */
+  --gutter: 1.25rem; /* 20px each side, once the page is narrower than the max */
+  --space-page: clamp(1.5rem, 5vw, 4.5rem); /* vertical page margin */
+  --entry-wrap: 40ch; /* entry title shrinks to this before the date wraps under it */
 
   /* Print */
   --print-vert: 1.75rem; /* 28px */
@@ -64,9 +65,11 @@ html {
 body {
   font-family: var(--font-family);
   color: var(--color-text);
-  margin: 5% auto;
+  /* Fills the viewport minus one gutter per side, capped at the max measure.
+     `auto` side margins then distribute exactly that gutter. */
+  width: min(100% - 2 * var(--gutter), var(--max-width-px));
+  margin: var(--space-page) auto;
   line-height: 1.4;
-  max-width: min(var(--max-width), var(--max-width-px));
 }
 
 a {
@@ -166,23 +169,25 @@ header {
   margin-top: var(--space-sm);
 }
 
+/* Title and dates share a line while they fit; once the title is squeezed to
+   --entry-wrap the dates drop underneath on their own. Content decides, so
+   there is no pixel breakpoint to guess at. */
 .entry-header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: var(--space-1);
+  gap: var(--space-xxs) var(--space-1);
   align-items: flex-start;
   font-weight: 700;
 }
 
 .entry-left {
   min-width: 0;
-  flex: 1 1 auto;
+  flex: 1 1 var(--entry-wrap);
 }
 
 .entry-dates {
-  flex: 0 0 auto;
-  text-align: right;
-  min-width: 8ch;
+  flex: 0 0 auto; /* never wraps mid-date; the title gives way first */
 }
 
 .entry-subheader {
@@ -202,29 +207,13 @@ li {
    Media Queries
    ========================================================================== */
 
-/* A percentage width suits a desktop but strands a quarter of a phone screen
-   in margin (73% of 390px leaves ~105px empty). Below --narrow, take the full
-   width and keep only a gutter. */
-@media (max-width: 600px) {
-  body {
-    max-width: none;
-    padding-inline: var(--gutter);
-  }
-}
-
-@media (max-width: 480px) {
-  .entry-header {
-    flex-direction: column;
-    gap: var(--space-xxs);
-  }
-
-  .entry-dates {
-    text-align: left;
-  }
-}
-
 @media print {
+  /* `width` above still applies in print, and a fixed side margin would defeat
+     the `auto` centring — giving a 32px left margin against a ~190px right one.
+     Fill the page instead and let padding provide symmetric margins. */
   body {
-    margin: var(--print-vert) var(--print-horz);
+    width: auto;
+    margin: var(--print-vert) auto;
+    padding-inline: var(--print-horz);
   }
 }
